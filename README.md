@@ -1,2 +1,2 @@
-# AST_WEB
-Alkhair Scientific Traders web application for online store.
+# ASTOnlineShop
+Alkhair Scientific Traders web application for online ecommerce shop.
