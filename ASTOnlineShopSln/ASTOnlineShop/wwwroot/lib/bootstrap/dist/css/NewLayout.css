@@ -1,0 +1,107 @@
+/*Importing source*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Roboto:wght@400&display=swap');
+@import url(font-awesome.css);
+
+
+/*Global style for ecommerce store*/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+    font-size:14px;
+    line-height:16px;
+    color:#00ADB5;
+    background:#EEEEEE;
+    overflow-x:hidden;
+    scrollbar-face-color:#222831
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;    
+}
+
+/*Logo Style*/
+.logo{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #00ADB5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+.logo h1,
+.logo h2{
+    margin: 5px 0 5px;
+    text-align:left;
+    font-size: 32px;
+    line-height:34px;
+    fongt-weight: 700;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    padding: 0;
+
+}
+.logo h1 a,
+.logo h2 a{
+    color:#333;
+    text-decoration:none;
+    -webkit-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        -moz-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        -o-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        -ms-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+
+}
+.logo h1 a:hover,
+.logo h2 a:hover{
+    color:#00ADB5;
+    text-decoration:none;
+}
+/*Account*/
+.account a:hover{
+    color:#333;
+    text-decoration:underline;
+}
+.account h4{
+    font-size: 16px;
+    line-height:18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px;
+    padding: 0;
+}
+.account ul{
+    list-style-type: none;
+    margin-left: -20px;
+    float:right;
+    padding: 0;
+}
+.account ul>li{
+    float:left;
+    margin: 0 0 0 10px;
+}
+.account ul > li:nth-child(1),
+.account ul > #your-account{
+    border-right : 1px solid #00ADB5;
+    padding-right: 10px;
+    margin: 0;
+}
+
+
+
+
+
+/*
+#222831 black
+#393E46 grey
+#00ADB5 teal
+#EEEEEE white
+*/
