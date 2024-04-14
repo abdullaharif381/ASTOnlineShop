@@ -59,7 +59,7 @@ namespace ASTDesktopApp.Models
 
         public override void SaveButton_Click(object sender, EventArgs e)
         {
-            if (!MainClass.IsUserValid(this))
+            if (!MainClass.IsEntryValid(this))
             {
                 MessageBox.Show("Please enter all the required fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

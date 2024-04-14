@@ -185,7 +185,7 @@ namespace ASTDesktopApp
 
             return isValid;
         }
-        public static bool IsUserValid(MaterialForm MF)
+        public static bool IsEntryValid(MaterialForm MF)
         {           
             int count = 0;
             foreach (Control c in MF.Controls)

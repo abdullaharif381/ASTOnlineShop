@@ -254,7 +254,7 @@
             // LeftPanel
             // 
             LeftPanel.AutoSize = true;
-            LeftPanel.BackColor = Color.FromArgb(0, 173, 181);
+            LeftPanel.BackColor = Color.SkyBlue;
             LeftPanel.Controls.Add(HiLabel1);
             LeftPanel.Controls.Add(UsersButton);
             LeftPanel.Controls.Add(ProductsButton);
@@ -276,7 +276,7 @@
             HiLabel1.BackColor = Color.FromArgb(0, 173, 181);
             HiLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             HiLabel1.ForeColor = Color.FromArgb(238, 238, 238);
-            HiLabel1.Location = new Point(37, 33);
+            HiLabel1.Location = new Point(37, 24);
             HiLabel1.Name = "HiLabel1";
             HiLabel1.Size = new Size(184, 81);
             HiLabel1.TabIndex = 15;

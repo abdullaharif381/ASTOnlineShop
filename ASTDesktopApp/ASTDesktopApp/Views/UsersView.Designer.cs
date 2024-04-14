@@ -39,7 +39,7 @@
             dgvPassword = new DataGridViewTextBoxColumn();
             dgvRole = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
-            dvgDel = new DataGridViewImageColumn();
+            dgvDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)UserDataGridView).BeginInit();
             SuspendLayout();
@@ -57,7 +57,7 @@
             UserDataGridView.BorderStyle = BorderStyle.Fixed3D;
             UserDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             UserDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvUsername, dgvPassword, dgvRole, dgvEdit, dvgDel });
+            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvUsername, dgvPassword, dgvRole, dgvEdit, dgvDel });
             UserDataGridView.Dock = DockStyle.Fill;
             UserDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             UserDataGridView.Location = new Point(3, 169);
@@ -135,15 +135,15 @@
             dgvEdit.Name = "dgvEdit";
             dgvEdit.ReadOnly = true;
             // 
-            // dvgDel
+            // dgvDel
             // 
-            dvgDel.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dvgDel.FillWeight = 38.03121F;
-            dvgDel.HeaderText = "";
-            dvgDel.Image = Properties.Resources.trash;
-            dvgDel.MinimumWidth = 40;
-            dvgDel.Name = "dvgDel";
-            dvgDel.ReadOnly = true;
+            dgvDel.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDel.FillWeight = 38.03121F;
+            dgvDel.HeaderText = "";
+            dgvDel.Image = Properties.Resources.trash;
+            dgvDel.MinimumWidth = 40;
+            dgvDel.Name = "dgvDel";
+            dgvDel.ReadOnly = true;
             // 
             // UsersView
             // 
@@ -173,6 +173,6 @@
         private DataGridViewTextBoxColumn dgvPassword;
         private DataGridViewTextBoxColumn dgvRole;
         private DataGridViewImageColumn dgvEdit;
-        private DataGridViewImageColumn dvgDel;
+        private DataGridViewImageColumn dgvDel;
     }
 }

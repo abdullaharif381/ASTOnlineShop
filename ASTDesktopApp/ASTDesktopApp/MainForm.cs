@@ -110,6 +110,7 @@ namespace ASTDesktopApp
 
         private void CategoryButton_Click(object sender, EventArgs e)
         {
+            AddControlsToPanel(new CategoryView());
 
         }
 

@@ -47,7 +47,7 @@
             UsernameTextBox.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             UsernameTextBox.HideSelection = true;
             UsernameTextBox.LeadingIcon = null;
-            UsernameTextBox.Location = new Point(34, 122);
+            UsernameTextBox.Location = new Point(25, 122);
             UsernameTextBox.MaxLength = 32767;
             UsernameTextBox.MouseState = MaterialSkin.MouseState.OUT;
             UsernameTextBox.Name = "UsernameTextBox";
@@ -77,7 +77,7 @@
             RoleTextBox.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             RoleTextBox.HideSelection = true;
             RoleTextBox.LeadingIcon = null;
-            RoleTextBox.Location = new Point(34, 291);
+            RoleTextBox.Location = new Point(25, 291);
             RoleTextBox.MaxLength = 32767;
             RoleTextBox.MouseState = MaterialSkin.MouseState.OUT;
             RoleTextBox.Name = "RoleTextBox";
@@ -107,7 +107,7 @@
             PasswordTextBox.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             PasswordTextBox.HideSelection = true;
             PasswordTextBox.LeadingIcon = null;
-            PasswordTextBox.Location = new Point(34, 204);
+            PasswordTextBox.Location = new Point(25, 204);
             PasswordTextBox.MaxLength = 32767;
             PasswordTextBox.MouseState = MaterialSkin.MouseState.OUT;
             PasswordTextBox.Name = "PasswordTextBox";
@@ -131,7 +131,7 @@
             materialLabel1.AutoSize = true;
             materialLabel1.Depth = 0;
             materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.Location = new Point(34, 100);
+            materialLabel1.Location = new Point(25, 100);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
             materialLabel1.Size = new Size(72, 19);
@@ -143,7 +143,7 @@
             materialLabel2.AutoSize = true;
             materialLabel2.Depth = 0;
             materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel2.Location = new Point(34, 182);
+            materialLabel2.Location = new Point(25, 182);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
             materialLabel2.Size = new Size(71, 19);
@@ -155,7 +155,7 @@
             materialLabel3.AutoSize = true;
             materialLabel3.Depth = 0;
             materialLabel3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel3.Location = new Point(34, 269);
+            materialLabel3.Location = new Point(25, 269);
             materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
             materialLabel3.Size = new Size(32, 19);
@@ -166,7 +166,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(380, 450);
             Controls.Add(materialLabel3);
             Controls.Add(materialLabel2);
             Controls.Add(materialLabel1);
