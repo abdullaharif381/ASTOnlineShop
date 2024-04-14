@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Properties;
 using MaterialSkin.Controls;
+using ASTDesktopApp.Models;
+
 
 namespace ASTDesktopApp
 {
@@ -26,9 +28,17 @@ namespace ASTDesktopApp
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
+            if(MainClass.IsValidUser(UsernameTextBox.Text, PasswordTextBox.Text) == true)
+            {
+                this.Hide();
+                MainForm main = new MainForm();
+                main.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
     }
 }

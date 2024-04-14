@@ -83,6 +83,16 @@ namespace ASTDesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chemical {
+            get {
+                object obj = ResourceManager.GetObject("chemical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer {
             get {
                 object obj = ResourceManager.GetObject("customer", resourceCulture);
@@ -136,6 +146,16 @@ namespace ASTDesktopApp.Properties {
         internal static System.Drawing.Bitmap logo_small_icon_only_inverted {
             get {
                 object obj = ResourceManager.GetObject("logo_small_icon_only_inverted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap myuser {
+            get {
+                object obj = ResourceManager.GetObject("myuser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

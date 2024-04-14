@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            UsernameTextBox = new MaterialSkin.Controls.MaterialTextBox();
+            PasswordTextBox = new MaterialSkin.Controls.MaterialTextBox();
             LoginButton = new MaterialSkin.Controls.MaterialButton();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -47,40 +47,40 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // materialTextBox1
+            // UsernameTextBox
             // 
-            materialTextBox1.AnimateReadOnly = true;
-            materialTextBox1.BorderStyle = BorderStyle.None;
-            materialTextBox1.Depth = 0;
-            materialTextBox1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox1.LeadingIcon = null;
-            materialTextBox1.Location = new Point(432, 188);
-            materialTextBox1.MaxLength = 50;
-            materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox1.Multiline = false;
-            materialTextBox1.Name = "materialTextBox1";
-            materialTextBox1.Size = new Size(310, 50);
-            materialTextBox1.TabIndex = 2;
-            materialTextBox1.Text = "";
-            materialTextBox1.TrailingIcon = null;
+            UsernameTextBox.AnimateReadOnly = true;
+            UsernameTextBox.BorderStyle = BorderStyle.None;
+            UsernameTextBox.Depth = 0;
+            UsernameTextBox.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            UsernameTextBox.LeadingIcon = null;
+            UsernameTextBox.Location = new Point(432, 188);
+            UsernameTextBox.MaxLength = 50;
+            UsernameTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            UsernameTextBox.Multiline = false;
+            UsernameTextBox.Name = "UsernameTextBox";
+            UsernameTextBox.Size = new Size(310, 50);
+            UsernameTextBox.TabIndex = 2;
+            UsernameTextBox.Text = "";
+            UsernameTextBox.TrailingIcon = null;
             // 
-            // materialTextBox2
+            // PasswordTextBox
             // 
-            materialTextBox2.AnimateReadOnly = false;
-            materialTextBox2.BorderStyle = BorderStyle.None;
-            materialTextBox2.Depth = 0;
-            materialTextBox2.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox2.LeadingIcon = null;
-            materialTextBox2.Location = new Point(432, 273);
-            materialTextBox2.MaxLength = 50;
-            materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox2.Multiline = false;
-            materialTextBox2.Name = "materialTextBox2";
-            materialTextBox2.Password = true;
-            materialTextBox2.Size = new Size(310, 50);
-            materialTextBox2.TabIndex = 3;
-            materialTextBox2.Text = "";
-            materialTextBox2.TrailingIcon = null;
+            PasswordTextBox.AnimateReadOnly = false;
+            PasswordTextBox.BorderStyle = BorderStyle.None;
+            PasswordTextBox.Depth = 0;
+            PasswordTextBox.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            PasswordTextBox.LeadingIcon = null;
+            PasswordTextBox.Location = new Point(432, 273);
+            PasswordTextBox.MaxLength = 50;
+            PasswordTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            PasswordTextBox.Multiline = false;
+            PasswordTextBox.Name = "PasswordTextBox";
+            PasswordTextBox.Password = true;
+            PasswordTextBox.Size = new Size(310, 50);
+            PasswordTextBox.TabIndex = 3;
+            PasswordTextBox.Text = "";
+            PasswordTextBox.TrailingIcon = null;
             // 
             // LoginButton
             // 
@@ -94,7 +94,7 @@
             LoginButton.MouseState = MaterialSkin.MouseState.HOVER;
             LoginButton.Name = "LoginButton";
             LoginButton.NoAccentTextColor = Color.Empty;
-            LoginButton.Size = new Size(64, 36);
+            LoginButton.Size = new Size(68, 36);
             LoginButton.TabIndex = 4;
             LoginButton.Text = " Login";
             LoginButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -106,7 +106,7 @@
             // 
             materialLabel2.AutoSize = true;
             materialLabel2.Depth = 0;
-            materialLabel2.Font = new Font("Seoge UI", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel2.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
             materialLabel2.Location = new Point(432, 168);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -150,8 +150,8 @@
             Controls.Add(materialLabel3);
             Controls.Add(materialLabel2);
             Controls.Add(LoginButton);
-            Controls.Add(materialTextBox2);
-            Controls.Add(materialTextBox1);
+            Controls.Add(PasswordTextBox);
+            Controls.Add(UsernameTextBox);
             Controls.Add(pictureBox1);
             Name = "LoginForm";
             Sizable = false;
@@ -166,8 +166,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox UsernameTextBox;
+        private MaterialSkin.Controls.MaterialTextBox PasswordTextBox;
         private MaterialSkin.Controls.MaterialButton LoginButton;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;

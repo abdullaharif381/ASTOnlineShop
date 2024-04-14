@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,8 +50,41 @@ namespace ASTDesktopApp.Views
 
         private void UserDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (UserDataGridView.CurrentCell.OwningColumn.Name == "dgvEdit" )
+            {
+                AddUsers addUser = new AddUsers();                
+                addUser.setID((UserDataGridView.CurrentRow.Cells["dgvID"].Value.ToString()));
+                addUser.setUsername(UserDataGridView.CurrentRow.Cells["dgvUsername"].Value.ToString());
+                addUser.setRole(UserDataGridView.CurrentRow.Cells["dgvRole"].Value.ToString());
+                MainClass.BlurBackground(addUser);
+                LoadData();
+
+
+            }
+            if(UserDataGridView.CurrentCell.OwningColumn.Name == "dvgDel")
+{
+    DialogResult dr = MessageBox.Show("Are you sure you want to delete this record?", "Question...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+    if (dr == DialogResult.Yes)
+    {
+        int userID = Convert.ToInt32(UserDataGridView.CurrentRow.Cells["dgvID"].Value);
+        string query = "DELETE FROM Users WHERE UserID = '" + userID + "'";
+        Hashtable ht = new Hashtable();
+        if (MainClass.SQL(query, ht) > 0)
+        {
+            // If the deletion is successful, reload the data
             LoadData();
+            MessageBox.Show("User deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        else
+        {
+            // If there's an error, show the error message
+            MessageBox.Show("An error occurred while deleting the user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+}
+
+            
+            
         }
         public override void AddNewButton_Click(object sender, EventArgs e)
         {

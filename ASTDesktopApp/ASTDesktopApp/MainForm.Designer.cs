@@ -40,6 +40,7 @@
             ProductsButton = new MaterialSkin.Controls.MaterialButton();
             UsersButton = new MaterialSkin.Controls.MaterialButton();
             LeftPanel = new Panel();
+            HiLabel1 = new Label();
             CentrePanel.SuspendLayout();
             LeftPanel.SuspendLayout();
             SuspendLayout();
@@ -49,9 +50,9 @@
             CentrePanel.AutoSize = true;
             CentrePanel.Controls.Add(MiddlePanel);
             CentrePanel.Dock = DockStyle.Fill;
-            CentrePanel.Location = new Point(227, 64);
+            CentrePanel.Location = new Point(267, 64);
             CentrePanel.Name = "CentrePanel";
-            CentrePanel.Size = new Size(811, 541);
+            CentrePanel.Size = new Size(930, 683);
             CentrePanel.TabIndex = 1;
             // 
             // MiddlePanel
@@ -62,8 +63,9 @@
             MiddlePanel.Dock = DockStyle.Fill;
             MiddlePanel.Location = new Point(0, 0);
             MiddlePanel.Name = "MiddlePanel";
-            MiddlePanel.Size = new Size(811, 541);
+            MiddlePanel.Size = new Size(930, 683);
             MiddlePanel.TabIndex = 0;
+            MiddlePanel.Paint += MiddlePanel_Paint;
             // 
             // ReportButton
             // 
@@ -75,7 +77,7 @@
             ReportButton.ForeColor = Color.White;
             ReportButton.HighEmphasis = false;
             ReportButton.Icon = Properties.Resources.report;
-            ReportButton.Location = new Point(45, 423);
+            ReportButton.Location = new Point(37, 520);
             ReportButton.Margin = new Padding(0);
             ReportButton.MouseState = MaterialSkin.MouseState.HOVER;
             ReportButton.Name = "ReportButton";
@@ -98,7 +100,7 @@
             CustomersButton.ForeColor = Color.White;
             CustomersButton.HighEmphasis = false;
             CustomersButton.Icon = Properties.Resources.customer1;
-            CustomersButton.Location = new Point(45, 294);
+            CustomersButton.Location = new Point(37, 391);
             CustomersButton.Margin = new Padding(0);
             CustomersButton.MouseState = MaterialSkin.MouseState.HOVER;
             CustomersButton.Name = "CustomersButton";
@@ -120,7 +122,7 @@
             CategoryButton.ForeColor = Color.White;
             CategoryButton.HighEmphasis = false;
             CategoryButton.Icon = Properties.Resources.category;
-            CategoryButton.Location = new Point(45, 103);
+            CategoryButton.Location = new Point(37, 200);
             CategoryButton.Margin = new Padding(0);
             CategoryButton.MouseState = MaterialSkin.MouseState.HOVER;
             CategoryButton.Name = "CategoryButton";
@@ -144,7 +146,7 @@
             SaleButton.ForeColor = Color.White;
             SaleButton.HighEmphasis = false;
             SaleButton.Icon = Properties.Resources.sales;
-            SaleButton.Location = new Point(45, 357);
+            SaleButton.Location = new Point(37, 454);
             SaleButton.Margin = new Padding(0);
             SaleButton.MouseState = MaterialSkin.MouseState.HOVER;
             SaleButton.Name = "SaleButton";
@@ -167,7 +169,7 @@
             HomeButton.ForeColor = Color.White;
             HomeButton.HighEmphasis = false;
             HomeButton.Icon = Properties.Resources.home;
-            HomeButton.Location = new Point(45, 34);
+            HomeButton.Location = new Point(37, 131);
             HomeButton.Margin = new Padding(0);
             HomeButton.MouseState = MaterialSkin.MouseState.HOVER;
             HomeButton.Name = "HomeButton";
@@ -190,7 +192,7 @@
             PurchaseButton.ForeColor = Color.White;
             PurchaseButton.HighEmphasis = false;
             PurchaseButton.Icon = Properties.Resources.purchase;
-            PurchaseButton.Location = new Point(45, 225);
+            PurchaseButton.Location = new Point(37, 322);
             PurchaseButton.Margin = new Padding(0);
             PurchaseButton.MouseState = MaterialSkin.MouseState.HOVER;
             PurchaseButton.Name = "PurchaseButton";
@@ -213,7 +215,7 @@
             ProductsButton.ForeColor = Color.White;
             ProductsButton.HighEmphasis = false;
             ProductsButton.Icon = Properties.Resources.product;
-            ProductsButton.Location = new Point(45, 157);
+            ProductsButton.Location = new Point(37, 254);
             ProductsButton.Margin = new Padding(0);
             ProductsButton.MouseState = MaterialSkin.MouseState.HOVER;
             ProductsButton.Name = "ProductsButton";
@@ -236,7 +238,7 @@
             UsersButton.ForeColor = Color.White;
             UsersButton.HighEmphasis = false;
             UsersButton.Icon = (Image)resources.GetObject("UsersButton.Icon");
-            UsersButton.Location = new Point(45, 483);
+            UsersButton.Location = new Point(37, 580);
             UsersButton.Margin = new Padding(0);
             UsersButton.MouseState = MaterialSkin.MouseState.HOVER;
             UsersButton.Name = "UsersButton";
@@ -253,6 +255,7 @@
             // 
             LeftPanel.AutoSize = true;
             LeftPanel.BackColor = Color.FromArgb(0, 173, 181);
+            LeftPanel.Controls.Add(HiLabel1);
             LeftPanel.Controls.Add(UsersButton);
             LeftPanel.Controls.Add(ProductsButton);
             LeftPanel.Controls.Add(PurchaseButton);
@@ -264,14 +267,27 @@
             LeftPanel.Dock = DockStyle.Left;
             LeftPanel.Location = new Point(3, 64);
             LeftPanel.Name = "LeftPanel";
-            LeftPanel.Size = new Size(224, 541);
+            LeftPanel.Size = new Size(264, 683);
             LeftPanel.TabIndex = 0;
+            LeftPanel.Paint += LeftPanel_Paint;
+            // 
+            // HiLabel1
+            // 
+            HiLabel1.BackColor = Color.FromArgb(0, 173, 181);
+            HiLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            HiLabel1.ForeColor = Color.FromArgb(238, 238, 238);
+            HiLabel1.Location = new Point(37, 33);
+            HiLabel1.Name = "HiLabel1";
+            HiLabel1.Size = new Size(184, 81);
+            HiLabel1.TabIndex = 15;
+            HiLabel1.Text = "label1";
+            HiLabel1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1041, 608);
+            ClientSize = new Size(1200, 750);
             Controls.Add(CentrePanel);
             Controls.Add(LeftPanel);
             Name = "MainForm";
@@ -300,5 +316,7 @@
         private MaterialSkin.Controls.MaterialButton UsersButton;
         private Panel LeftPanel;
         private Panel MiddlePanel;
+        private Label HiLabel;
+        private Label HiLabel1;
     }
 }

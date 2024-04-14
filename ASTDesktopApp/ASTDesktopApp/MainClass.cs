@@ -170,9 +170,19 @@ namespace ASTDesktopApp
             string query = $"SELECT * FROM Users WHERE Username='{username}' AND Password='{password}'";
             SQLiteCommand command = new SQLiteCommand(query, Connection);
             SQLiteDataReader reader = command.ExecuteReader();
+
             bool isValid = reader.HasRows;
+            if(isValid)
+            {
+                while (reader.Read())
+                {
+                    Username = reader["Username"].ToString();
+                }
+
+            }
             reader.Close();
             CloseConnection();
+
             return isValid;
         }
         public static bool IsUserValid(MaterialForm MF)

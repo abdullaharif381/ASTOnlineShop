@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -37,7 +38,7 @@
             dgvUsername = new DataGridViewTextBoxColumn();
             dgvPassword = new DataGridViewTextBoxColumn();
             dgvRole = new DataGridViewTextBoxColumn();
-            dvgEdit = new DataGridViewImageColumn();
+            dgvEdit = new DataGridViewImageColumn();
             dvgDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)UserDataGridView).BeginInit();
@@ -56,13 +57,16 @@
             UserDataGridView.BorderStyle = BorderStyle.Fixed3D;
             UserDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             UserDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvUsername, dgvPassword, dgvRole, dvgEdit, dvgDel });
+            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvUsername, dgvPassword, dgvRole, dgvEdit, dvgDel });
             UserDataGridView.Dock = DockStyle.Fill;
             UserDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             UserDataGridView.Location = new Point(3, 169);
             UserDataGridView.Name = "UserDataGridView";
             UserDataGridView.ReadOnly = true;
             UserDataGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.AliceBlue;
+            dataGridViewCellStyle5.Padding = new Padding(10, 0, 10, 2);
+            UserDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             UserDataGridView.ScrollBars = ScrollBars.Horizontal;
             UserDataGridView.Size = new Size(794, 278);
             UserDataGridView.TabIndex = 4;
@@ -121,15 +125,15 @@
             dgvRole.Name = "dgvRole";
             dgvRole.ReadOnly = true;
             // 
-            // dvgEdit
+            // dgvEdit
             // 
-            dvgEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dvgEdit.FillWeight = 26.8907566F;
-            dvgEdit.HeaderText = "";
-            dvgEdit.Image = Properties.Resources.pen;
-            dvgEdit.MinimumWidth = 20;
-            dvgEdit.Name = "dvgEdit";
-            dvgEdit.ReadOnly = true;
+            dgvEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvEdit.FillWeight = 26.8907566F;
+            dgvEdit.HeaderText = "";
+            dgvEdit.Image = Properties.Resources.pen;
+            dgvEdit.MinimumWidth = 20;
+            dgvEdit.Name = "dgvEdit";
+            dgvEdit.ReadOnly = true;
             // 
             // dvgDel
             // 
@@ -147,6 +151,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(UserDataGridView);
+            Location = new Point(0, 0);
             Name = "UsersView";
             Text = "Users";
             Controls.SetChildIndex(TopViewPanel, 0);
@@ -167,7 +172,7 @@
         private DataGridViewTextBoxColumn dgvUsername;
         private DataGridViewTextBoxColumn dgvPassword;
         private DataGridViewTextBoxColumn dgvRole;
-        private DataGridViewImageColumn dvgEdit;
+        private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dvgDel;
     }
 }

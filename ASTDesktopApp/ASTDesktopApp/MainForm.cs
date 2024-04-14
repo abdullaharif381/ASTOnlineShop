@@ -52,6 +52,9 @@ namespace ASTDesktopApp
         private void MainForm_Load(object sender, EventArgs e)
         {
             _instance = this;
+            HiLabel1.Text = "Welcome, " + MainClass.Username;
+            
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -93,7 +96,8 @@ namespace ASTDesktopApp
             //connect with usersview open other file to add users
             AddControlsToPanel(new UsersView());
 
-            
+
+
 
         }
 
@@ -125,6 +129,16 @@ namespace ASTDesktopApp
         }
 
         private void HomeButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MiddlePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LeftPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
