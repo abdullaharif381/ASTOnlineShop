@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SQLite;
 using MaterialSkin.Controls;
+using System.Drawing;
+using System.Diagnostics;
+using System.Collections;
 
 namespace ASTDesktopApp
 {
@@ -30,18 +34,7 @@ namespace ASTDesktopApp
             }
         }
 
-        // Method to check if the user is valid or not
-        public static bool IsValidUser(string username, string password)
-        {
-            ConnectToDatabase();
-            string query = $"SELECT * FROM Users WHERE Username='{username}' AND Password='{password}'";
-            SQLiteCommand command = new SQLiteCommand(query, Connection);
-            SQLiteDataReader reader = command.ExecuteReader();
-            bool isValid = reader.HasRows;
-            reader.Close();
-            CloseConnection();
-            return isValid;
-        }
+       
 
         // Property for username
         public static string? User { get; private set; }
@@ -77,6 +70,28 @@ namespace ASTDesktopApp
         }
 
         // Method for CRUD operations
+        public static int SQL(string query, Hashtable ht)
+        {
+            int res = 0;
+            try
+            {
+                ConnectToDatabase();
+                SQLiteCommand command = new SQLiteCommand(query, Connection);
+                foreach (DictionaryEntry item in ht)
+                {
+                    command.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                }
+                res = command.ExecuteNonQuery();
+                CloseConnection();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                CloseConnection();
+                MaterialMessageBox.Show(ex.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, true);
+                return res;
+            }
+        }
         public static void ExecuteQuery(string query)
         {
             ConnectToDatabase();
@@ -98,32 +113,31 @@ namespace ASTDesktopApp
         public static void LoadData(string query, DataGridView dgv, ListBox lb)
         {
             dgv.CellFormatting += new DataGridViewCellFormattingEventHandler(dgv_CellFormatting);
-            
+
             try
             {
                 ConnectToDatabase();
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, Connection);
-                System.Data.DataTable dt = new System.Data.DataTable();
+                DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                dgv.Rows.Clear();
-                // use a for loop instead of for each command
-
-
-
-                for (int i =0; i<lb.Items.Count; i++)
+               
+                
+                for (int j = 0; j < dt.Columns.Count; j++)
                 {
-                    string colName = ((DataGridViewColumn)lb.Items[i]).Name;
-                    dgv.Columns[colName].DataPropertyName = dt.Columns[i].ToString();
+                    dgv.Columns[((DataGridViewColumn)lb.Items[j]).Name].DataPropertyName = dt.Columns[j].ToString();
                 }
+
                 dgv.DataSource = dt;
                 CloseConnection();
             }
             catch (Exception ex)
             {
-                CloseConnection();
+                
                 System.Windows.Forms.MessageBox.Show(ex.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                CloseConnection();
             }
         }
+
 
         public static void BlurBackground(MaterialForm Model)
         {
@@ -147,6 +161,47 @@ namespace ASTDesktopApp
 
 
 
+        }
+        
+        // Method to check if the user is valid or not
+        public static bool IsValidUser(string username, string password)
+        {
+            ConnectToDatabase();
+            string query = $"SELECT * FROM Users WHERE Username='{username}' AND Password='{password}'";
+            SQLiteCommand command = new SQLiteCommand(query, Connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            bool isValid = reader.HasRows;
+            reader.Close();
+            CloseConnection();
+            return isValid;
+        }
+        public static bool IsUserValid(MaterialForm MF)
+        {           
+            int count = 0;
+            foreach (Control c in MF.Controls)
+            {
+                string cTag = Convert.ToString(c.Tag);
+                if (cTag != " " && cTag != null)
+                {
+                    if (c is MaterialSkin.Controls.MaterialTextBox2)
+                    {
+                        MaterialSkin.Controls.MaterialTextBox2 tb = (MaterialSkin.Controls.MaterialTextBox2)c;
+                        if (tb.Text.Trim() == "")
+                        {
+                            tb.BackColor = Color.Red;                           
+                            count++;
+
+                        }
+                        else
+                        {
+                            tb.BackColor = Color.White;
+                        }
+                        
+                    }
+                }
+            }
+            return count == 0;
+           
         }
     }
 }

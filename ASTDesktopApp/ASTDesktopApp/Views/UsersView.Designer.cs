@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             UserDataGridView = new DataGridView();
-            dgvSr = new DataGridViewTextBoxColumn();
             dgvID = new DataGridViewTextBoxColumn();
             dgvUsername = new DataGridViewTextBoxColumn();
             dgvPassword = new DataGridViewTextBoxColumn();
@@ -48,81 +51,95 @@
             // 
             UserDataGridView.AllowUserToAddRows = false;
             UserDataGridView.AllowUserToDeleteRows = false;
-            UserDataGridView.BackgroundColor = Color.FromArgb(238, 238, 238);
+            UserDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            UserDataGridView.BackgroundColor = SystemColors.InactiveBorder;
+            UserDataGridView.BorderStyle = BorderStyle.Fixed3D;
+            UserDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             UserDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvSr, dgvID, dgvUsername, dgvPassword, dgvRole, dvgEdit, dvgDel });
+            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvUsername, dgvPassword, dgvRole, dvgEdit, dvgDel });
             UserDataGridView.Dock = DockStyle.Fill;
-            UserDataGridView.EditMode = DataGridViewEditMode.EditOnF2;
+            UserDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             UserDataGridView.Location = new Point(3, 169);
             UserDataGridView.Name = "UserDataGridView";
             UserDataGridView.ReadOnly = true;
             UserDataGridView.RowHeadersWidth = 51;
+            UserDataGridView.ScrollBars = ScrollBars.Horizontal;
             UserDataGridView.Size = new Size(794, 278);
             UserDataGridView.TabIndex = 4;
             UserDataGridView.CellContentClick += UserDataGridView_CellContentClick;
             // 
-            // dgvSr
-            // 
-            dgvSr.FillWeight = 20F;
-            dgvSr.HeaderText = "Sr.";
-            dgvSr.MinimumWidth = 20;
-            dgvSr.Name = "dgvSr";
-            dgvSr.ReadOnly = true;
-            dgvSr.Width = 40;
-            // 
             // dgvID
             // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.AliceBlue;
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(34, 40, 49);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 173, 181);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(34, 40, 49);
+            dgvID.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvID.FillWeight = 50F;
             dgvID.HeaderText = "ID";
-            dgvID.MinimumWidth = 6;
+            dgvID.MinimumWidth = 50;
             dgvID.Name = "dgvID";
             dgvID.ReadOnly = true;
-            dgvID.Visible = false;
-            dgvID.Width = 125;
             // 
             // dgvUsername
             // 
-            dgvUsername.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvUsername.HeaderText = "Username";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.AliceBlue;
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(34, 40, 49);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 173, 181);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(34, 40, 49);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvUsername.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvUsername.FillWeight = 95.0780258F;
+            dgvUsername.HeaderText = "User";
             dgvUsername.MinimumWidth = 6;
             dgvUsername.Name = "dgvUsername";
             dgvUsername.ReadOnly = true;
             // 
             // dgvPassword
             // 
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvPassword.DefaultCellStyle = dataGridViewCellStyle3;
             dgvPassword.HeaderText = "Password";
             dgvPassword.MinimumWidth = 6;
             dgvPassword.Name = "dgvPassword";
             dgvPassword.ReadOnly = true;
             dgvPassword.Visible = false;
-            dgvPassword.Width = 125;
             // 
             // dgvRole
             // 
+            dgvRole.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.AliceBlue;
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(34, 40, 49);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 173, 181);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(34, 40, 49);
+            dgvRole.DefaultCellStyle = dataGridViewCellStyle4;
             dgvRole.HeaderText = "Role";
             dgvRole.MinimumWidth = 6;
             dgvRole.Name = "dgvRole";
             dgvRole.ReadOnly = true;
-            dgvRole.Width = 125;
             // 
             // dvgEdit
             // 
-            dvgEdit.FillWeight = 40F;
+            dvgEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvgEdit.FillWeight = 26.8907566F;
             dvgEdit.HeaderText = "";
-            dvgEdit.Image = Properties.Resources.edit;
-            dvgEdit.MinimumWidth = 40;
+            dvgEdit.Image = Properties.Resources.pen;
+            dvgEdit.MinimumWidth = 20;
             dvgEdit.Name = "dvgEdit";
             dvgEdit.ReadOnly = true;
-            dvgEdit.Width = 40;
             // 
             // dvgDel
             // 
-            dvgDel.FillWeight = 40F;
+            dvgDel.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvgDel.FillWeight = 38.03121F;
             dvgDel.HeaderText = "";
-            dvgDel.Image = Properties.Resources.del;
+            dvgDel.Image = Properties.Resources.trash;
             dvgDel.MinimumWidth = 40;
             dvgDel.Name = "dvgDel";
             dvgDel.ReadOnly = true;
-            dvgDel.Width = 40;
             // 
             // UsersView
             // 
@@ -130,9 +147,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(UserDataGridView);
-            Location = new Point(0, 0);
             Name = "UsersView";
-            Text = "UsersView";
+            Text = "Users";
             Controls.SetChildIndex(TopViewPanel, 0);
             Controls.SetChildIndex(SearchTextBox, 0);
             Controls.SetChildIndex(materialLabel1, 0);
@@ -147,7 +163,6 @@
         #endregion
 
         private DataGridView UserDataGridView;
-        private DataGridViewTextBoxColumn dgvSr;
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvUsername;
         private DataGridViewTextBoxColumn dgvPassword;

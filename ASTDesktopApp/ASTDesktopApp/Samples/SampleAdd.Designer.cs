@@ -31,7 +31,6 @@
             BottomPanel = new Panel();
             CloseButton = new MaterialSkin.Controls.MaterialButton();
             SaveButton = new MaterialSkin.Controls.MaterialButton();
-            CenterPanel = new Panel();
             BottomPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -85,22 +84,14 @@
             SaveButton.UseVisualStyleBackColor = true;
             SaveButton.Click += SaveButton_Click;
             // 
-            // CenterPanel
-            // 
-            CenterPanel.Dock = DockStyle.Fill;
-            CenterPanel.Location = new Point(3, 64);
-            CenterPanel.Name = "CenterPanel";
-            CenterPanel.Size = new Size(794, 299);
-            CenterPanel.TabIndex = 2;
-            // 
             // SampleAdd
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(CenterPanel);
             Controls.Add(BottomPanel);
             Name = "SampleAdd";
+            StartPosition = FormStartPosition.CenterScreen;
             BottomPanel.ResumeLayout(false);
             BottomPanel.PerformLayout();
             ResumeLayout(false);
@@ -108,7 +99,6 @@
 
         #endregion
         private Panel BottomPanel;
-        private Panel CenterPanel;
         private MaterialSkin.Controls.MaterialButton CloseButton;
         private MaterialSkin.Controls.MaterialButton SaveButton;
     }

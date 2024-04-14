@@ -28,7 +28,7 @@ namespace ASTDesktopApp
             this.Close();
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        public virtual void SaveButton_Click(object sender, EventArgs e)
         {
             InitializeComponent();
         }
