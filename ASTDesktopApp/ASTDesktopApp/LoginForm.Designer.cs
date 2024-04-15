@@ -32,9 +32,9 @@
             UsernameTextBox = new MaterialSkin.Controls.MaterialTextBox();
             PasswordTextBox = new MaterialSkin.Controls.MaterialTextBox();
             LoginButton = new MaterialSkin.Controls.MaterialButton();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             UsernameTextBox.Depth = 0;
             UsernameTextBox.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             UsernameTextBox.LeadingIcon = null;
-            UsernameTextBox.Location = new Point(432, 188);
+            UsernameTextBox.Location = new Point(432, 200);
             UsernameTextBox.MaxLength = 50;
             UsernameTextBox.MouseState = MaterialSkin.MouseState.OUT;
             UsernameTextBox.Multiline = false;
@@ -71,7 +71,7 @@
             PasswordTextBox.Depth = 0;
             PasswordTextBox.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             PasswordTextBox.LeadingIcon = null;
-            PasswordTextBox.Location = new Point(432, 273);
+            PasswordTextBox.Location = new Point(432, 293);
             PasswordTextBox.MaxLength = 50;
             PasswordTextBox.MouseState = MaterialSkin.MouseState.OUT;
             PasswordTextBox.Multiline = false;
@@ -102,53 +102,46 @@
             LoginButton.UseVisualStyleBackColor = true;
             LoginButton.Click += LoginButton_Click;
             // 
-            // materialLabel2
+            // label1
             // 
-            materialLabel2.AutoSize = true;
-            materialLabel2.Depth = 0;
-            materialLabel2.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            materialLabel2.Location = new Point(432, 168);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(66, 17);
-            materialLabel2.TabIndex = 5;
-            materialLabel2.Text = "Username";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(432, 106);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 41);
+            label1.TabIndex = 8;
+            label1.Text = "Chem Ease";
+            label1.Click += label1_Click;
             // 
-            // materialLabel3
+            // label2
             // 
-            materialLabel3.AutoSize = true;
-            materialLabel3.Depth = 0;
-            materialLabel3.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            materialLabel3.Location = new Point(432, 253);
-            materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel3.Name = "materialLabel3";
-            materialLabel3.Size = new Size(63, 17);
-            materialLabel3.TabIndex = 6;
-            materialLabel3.Text = "Password";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(432, 172);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 25);
+            label2.TabIndex = 9;
+            label2.Text = "Username";
             // 
-            // materialLabel1
+            // label3
             // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel1.Location = new Point(432, 106);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(257, 29);
-            materialLabel1.TabIndex = 7;
-            materialLabel1.Text = "Welcome to Chem Ease";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(432, 265);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 25);
+            label3.TabIndex = 10;
+            label3.Text = "Password";
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(materialLabel1);
-            Controls.Add(materialLabel3);
-            Controls.Add(materialLabel2);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(LoginButton);
             Controls.Add(PasswordTextBox);
             Controls.Add(UsernameTextBox);
@@ -169,8 +162,8 @@
         private MaterialSkin.Controls.MaterialTextBox UsernameTextBox;
         private MaterialSkin.Controls.MaterialTextBox PasswordTextBox;
         private MaterialSkin.Controls.MaterialButton LoginButton;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

@@ -28,7 +28,7 @@ namespace ASTDesktopApp
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(MainClass.IsValidUser(UsernameTextBox.Text, PasswordTextBox.Text) == true)
+            if (MainClass.IsValidUser(UsernameTextBox.Text, PasswordTextBox.Text) == true)
             {
                 this.Hide();
                 MainForm main = new MainForm();
@@ -38,7 +38,12 @@ namespace ASTDesktopApp
             {
                 MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

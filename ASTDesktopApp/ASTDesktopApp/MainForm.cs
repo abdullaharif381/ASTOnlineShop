@@ -53,7 +53,7 @@ namespace ASTDesktopApp
         {
             _instance = this;
             HiLabel1.Text = "Welcome, " + MainClass.Username;
-            
+
 
         }
 
@@ -142,6 +142,20 @@ namespace ASTDesktopApp
         private void LeftPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void CustomersButton_Click(object sender, EventArgs e)
+        {
+            AddControlsToPanel(new CustomersView());
+        }
+        private void SuppliersButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SuppliersButton_Click_1(object sender, EventArgs e)
+        {
+            AddControlsToPanel(new SuppliersView());
         }
     }
 }

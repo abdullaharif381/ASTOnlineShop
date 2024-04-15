@@ -89,7 +89,7 @@ namespace ASTDesktopApp.Views
 		}
 		public override void AddNewButton_Click(object sender, EventArgs e)
 		{
-			// open the AddUsers.cs form when this button is clicked:
+			//open the AddUsers.cs form when this button is clicked:
 			MainClass.BlurBackground(new AddUsers());
 			AddUsers add = new AddUsers();
 			add.Show();
@@ -108,5 +108,10 @@ namespace ASTDesktopApp.Views
 		{
 
 		}
-	}
+        private void CategoryDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Suppress the error dialog
+            e.ThrowException = false;
+        }
+    }
 }

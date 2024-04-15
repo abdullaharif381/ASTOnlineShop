@@ -34,8 +34,6 @@ namespace ASTDesktopApp
             }
         }
 
-       
-
         // Property for username
         public static string? User { get; private set; }
 
@@ -92,6 +90,7 @@ namespace ASTDesktopApp
                 return res;
             }
         }
+
         public static void ExecuteQuery(string query)
         {
             ConnectToDatabase();
@@ -99,6 +98,7 @@ namespace ASTDesktopApp
             command.ExecuteNonQuery();
             CloseConnection();
         }
+
         public static void dgv_CellFormatting(object sender, System.Windows.Forms.DataGridViewCellFormattingEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
@@ -110,6 +110,7 @@ namespace ASTDesktopApp
             }
             return;
         }
+
         public static void LoadData(string query, DataGridView dgv, ListBox lb)
         {
             dgv.CellFormatting += new DataGridViewCellFormattingEventHandler(dgv_CellFormatting);
@@ -120,8 +121,8 @@ namespace ASTDesktopApp
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, Connection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-               
-                
+
+
                 for (int j = 0; j < dt.Columns.Count; j++)
                 {
                     dgv.Columns[((DataGridViewColumn)lb.Items[j]).Name].DataPropertyName = dt.Columns[j].ToString();
@@ -132,22 +133,21 @@ namespace ASTDesktopApp
             }
             catch (Exception ex)
             {
-                
+
                 System.Windows.Forms.MessageBox.Show(ex.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                 CloseConnection();
             }
         }
 
-
         public static void BlurBackground(MaterialForm Model)
         {
             Form Background = new Form();
-            using(Model)
+            using (Model)
             {
                 Background.StartPosition = FormStartPosition.Manual;
                 Background.FormBorderStyle = FormBorderStyle.None;
                 Background.Opacity = 0.5;
-                Background.BackColor = Color.Black;                          
+                Background.BackColor = Color.Black;
                 Background.Size = MainForm.Instance.Size;
                 Background.Location = MainForm.Instance.Location;
                 Background.ShowInTaskbar = false;
@@ -157,12 +157,8 @@ namespace ASTDesktopApp
                 Background.Dispose();
 
             }
-        
-
-
-
         }
-        
+
         // Method to check if the user is valid or not
         public static bool IsValidUser(string username, string password)
         {
@@ -172,7 +168,7 @@ namespace ASTDesktopApp
             SQLiteDataReader reader = command.ExecuteReader();
 
             bool isValid = reader.HasRows;
-            if(isValid)
+            if (isValid)
             {
                 while (reader.Read())
                 {
@@ -185,8 +181,9 @@ namespace ASTDesktopApp
 
             return isValid;
         }
+
         public static bool IsEntryValid(MaterialForm MF)
-        {           
+        {
             int count = 0;
             foreach (Control c in MF.Controls)
             {
@@ -198,20 +195,18 @@ namespace ASTDesktopApp
                         MaterialSkin.Controls.MaterialTextBox2 tb = (MaterialSkin.Controls.MaterialTextBox2)c;
                         if (tb.Text.Trim() == "")
                         {
-                            tb.BackColor = Color.Red;                           
+                            tb.BackColor = Color.Red;
                             count++;
-
                         }
                         else
                         {
                             tb.BackColor = Color.White;
                         }
-                        
+
                     }
                 }
             }
             return count == 0;
-           
         }
     }
 }

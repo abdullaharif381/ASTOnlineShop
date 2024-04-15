@@ -41,7 +41,7 @@
             BottomPanel.Dock = DockStyle.Bottom;
             BottomPanel.Location = new Point(3, 363);
             BottomPanel.Name = "BottomPanel";
-            BottomPanel.Size = new Size(794, 84);
+            BottomPanel.Size = new Size(374, 84);
             BottomPanel.TabIndex = 1;
             // 
             // CloseButton
@@ -88,7 +88,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(380, 450);
             Controls.Add(BottomPanel);
             Name = "SampleAdd";
             StartPosition = FormStartPosition.CenterScreen;
