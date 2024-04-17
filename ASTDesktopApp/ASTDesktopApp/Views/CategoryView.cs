@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ASTDesktopApp.Views
 {
-    public partial class CategoryView : SampleViews
+    public partial class CategoryView: SampleViews
     {
         public CategoryView()
         {

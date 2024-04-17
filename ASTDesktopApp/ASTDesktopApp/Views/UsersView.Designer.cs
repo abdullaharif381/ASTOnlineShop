@@ -154,9 +154,8 @@
             Location = new Point(0, 0);
             Name = "UsersView";
             Text = "Users";
-            Controls.SetChildIndex(TopViewPanel, 0);
-            Controls.SetChildIndex(SearchTextBox, 0);
-            Controls.SetChildIndex(materialLabel1, 0);
+            
+            //Controls.SetChildIndex(materialLabel1, 0);
             Controls.SetChildIndex(UserDataGridView, 0);
             TopViewPanel.ResumeLayout(false);
             TopViewPanel.PerformLayout();

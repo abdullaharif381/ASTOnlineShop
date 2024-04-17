@@ -34,6 +34,7 @@
             dgvName = new DataGridViewTextBoxColumn();
             dgvAddress = new DataGridViewTextBoxColumn();
             dgvPhone = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
@@ -49,12 +50,11 @@
             SupplierDataGridView.BorderStyle = BorderStyle.Fixed3D;
             SupplierDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             SupplierDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SupplierDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvAddress, dgvPhone, dgvEdit, dgvDel });
+            SupplierDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvAddress, dgvPhone, Column1, dgvEdit, dgvDel });
             SupplierDataGridView.Dock = DockStyle.Fill;
             SupplierDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             SupplierDataGridView.Location = new Point(3, 169);
             SupplierDataGridView.Name = "SupplierDataGridView";
-            SupplierDataGridView.ReadOnly = true;
             SupplierDataGridView.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = Color.AliceBlue;
             dataGridViewCellStyle1.Padding = new Padding(10, 0, 10, 2);
@@ -70,28 +70,32 @@
             dgvID.HeaderText = "ID";
             dgvID.MinimumWidth = 6;
             dgvID.Name = "dgvID";
-            dgvID.ReadOnly = true;
+            dgvID.Resizable = DataGridViewTriState.True;
             // 
             // dgvName
             // 
             dgvName.HeaderText = "Name";
             dgvName.MinimumWidth = 6;
             dgvName.Name = "dgvName";
-            dgvName.ReadOnly = true;
             // 
             // dgvAddress
             // 
             dgvAddress.HeaderText = "Address";
             dgvAddress.MinimumWidth = 6;
             dgvAddress.Name = "dgvAddress";
-            dgvAddress.ReadOnly = true;
             // 
             // dgvPhone
             // 
             dgvPhone.HeaderText = "Phone";
             dgvPhone.MinimumWidth = 6;
             dgvPhone.Name = "dgvPhone";
-            dgvPhone.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Column1";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Visible = false;
             // 
             // dgvEdit
             // 
@@ -99,7 +103,7 @@
             dgvEdit.Image = Properties.Resources.pen;
             dgvEdit.MinimumWidth = 6;
             dgvEdit.Name = "dgvEdit";
-            dgvEdit.ReadOnly = true;
+            dgvEdit.Resizable = DataGridViewTriState.True;
             // 
             // dgvDel
             // 
@@ -107,7 +111,7 @@
             dgvDel.Image = Properties.Resources.trash;
             dgvDel.MinimumWidth = 6;
             dgvDel.Name = "dgvDel";
-            dgvDel.ReadOnly = true;
+            dgvDel.Resizable = DataGridViewTriState.True;
             // 
             // SuppliersView
             // 
@@ -120,14 +124,11 @@
             Text = "Suppliers";
             Load += SuppliersView_Load_1;
             Controls.SetChildIndex(TopViewPanel, 0);
-            Controls.SetChildIndex(SearchTextBox, 0);
-            Controls.SetChildIndex(materialLabel1, 0);
             Controls.SetChildIndex(SupplierDataGridView, 0);
             TopViewPanel.ResumeLayout(false);
             TopViewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SupplierDataGridView).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -137,6 +138,7 @@
         private DataGridViewTextBoxColumn dgvName;
         private DataGridViewTextBoxColumn dgvAddress;
         private DataGridViewTextBoxColumn dgvPhone;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
     }

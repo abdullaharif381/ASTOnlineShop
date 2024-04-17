@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             CustomerDataGridView = new DataGridView();
             dgvID = new DataGridViewTextBoxColumn();
             dgvName = new DataGridViewTextBoxColumn();
             dgvAddress = new DataGridViewTextBoxColumn();
             dgvPhone = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
@@ -49,16 +50,16 @@
             CustomerDataGridView.BorderStyle = BorderStyle.Fixed3D;
             CustomerDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             CustomerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CustomerDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvAddress, dgvPhone, dgvEdit, dgvDel });
+            CustomerDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvAddress, dgvPhone, Column1, dgvEdit, dgvDel });
             CustomerDataGridView.Dock = DockStyle.Fill;
             CustomerDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             CustomerDataGridView.Location = new Point(3, 169);
             CustomerDataGridView.Name = "CustomerDataGridView";
             CustomerDataGridView.ReadOnly = true;
             CustomerDataGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = Color.AliceBlue;
-            dataGridViewCellStyle2.Padding = new Padding(10, 0, 10, 2);
-            CustomerDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.AliceBlue;
+            dataGridViewCellStyle1.Padding = new Padding(10, 0, 10, 2);
+            CustomerDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             CustomerDataGridView.ScrollBars = ScrollBars.Horizontal;
             CustomerDataGridView.SelectionMode = DataGridViewSelectionMode.CellSelect;
             CustomerDataGridView.Size = new Size(794, 278);
@@ -92,6 +93,14 @@
             dgvPhone.Name = "dgvPhone";
             dgvPhone.ReadOnly = true;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Column1";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Visible = false;
+            // 
             // dgvEdit
             // 
             dgvEdit.HeaderText = "";
@@ -119,14 +128,11 @@
             Text = "Customers";
             Load += CustomersView_Load;
             Controls.SetChildIndex(TopViewPanel, 0);
-            Controls.SetChildIndex(SearchTextBox, 0);
-            Controls.SetChildIndex(materialLabel1, 0);
             Controls.SetChildIndex(CustomerDataGridView, 0);
             TopViewPanel.ResumeLayout(false);
             TopViewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -136,6 +142,7 @@
         private DataGridViewTextBoxColumn dgvName;
         private DataGridViewTextBoxColumn dgvAddress;
         private DataGridViewTextBoxColumn dgvPhone;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
     }

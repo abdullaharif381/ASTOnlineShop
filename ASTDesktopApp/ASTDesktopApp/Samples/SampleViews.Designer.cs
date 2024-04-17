@@ -30,8 +30,8 @@
         {
             AddNewButton = new MaterialSkin.Controls.MaterialButton();
             SearchTextBox = new MaterialSkin.Controls.MaterialTextBox2();
-            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             TopViewPanel = new Panel();
+            SearchButton = new MaterialSkin.Controls.MaterialButton();
             TopViewPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             AddNewButton.Depth = 0;
             AddNewButton.HighEmphasis = true;
             AddNewButton.Icon = Properties.Resources.add;
-            AddNewButton.Location = new Point(19, 39);
+            AddNewButton.Location = new Point(25, 36);
             AddNewButton.Margin = new Padding(4, 6, 4, 6);
             AddNewButton.MouseState = MaterialSkin.MouseState.HOVER;
             AddNewButton.Name = "AddNewButton";
@@ -66,7 +66,7 @@
             SearchTextBox.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SearchTextBox.HideSelection = true;
             SearchTextBox.LeadingIcon = null;
-            SearchTextBox.Location = new Point(460, 94);
+            SearchTextBox.Location = new Point(370, 24);
             SearchTextBox.MaxLength = 32767;
             SearchTextBox.MouseState = MaterialSkin.MouseState.OUT;
             SearchTextBox.Name = "SearchTextBox";
@@ -78,7 +78,7 @@
             SearchTextBox.SelectionLength = 0;
             SearchTextBox.SelectionStart = 0;
             SearchTextBox.ShortcutsEnabled = true;
-            SearchTextBox.Size = new Size(312, 48);
+            SearchTextBox.Size = new Size(311, 48);
             SearchTextBox.TabIndex = 1;
             SearchTextBox.TabStop = false;
             SearchTextBox.TextAlign = HorizontalAlignment.Left;
@@ -86,22 +86,10 @@
             SearchTextBox.UseSystemPasswordChar = false;
             SearchTextBox.TextChanged += SearchTextBox_TextChanged;
             // 
-            // materialLabel1
-            // 
-            materialLabel1.AutoSize = true;
-            materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
-            materialLabel1.Location = new Point(404, 111);
-            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(50, 19);
-            materialLabel1.TabIndex = 2;
-            materialLabel1.Text = "Search";
-            materialLabel1.Click += materialLabel1_Click;
-            // 
             // TopViewPanel
             // 
+            TopViewPanel.Controls.Add(SearchButton);
+            TopViewPanel.Controls.Add(SearchTextBox);
             TopViewPanel.Controls.Add(AddNewButton);
             TopViewPanel.Dock = DockStyle.Top;
             TopViewPanel.Location = new Point(3, 64);
@@ -109,26 +97,42 @@
             TopViewPanel.Size = new Size(794, 105);
             TopViewPanel.TabIndex = 3;
             // 
+            // SearchButton
+            // 
+            SearchButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SearchButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            SearchButton.Depth = 0;
+            SearchButton.HighEmphasis = true;
+            SearchButton.Icon = null;
+            SearchButton.Location = new Point(701, 36);
+            SearchButton.Margin = new Padding(4, 6, 4, 6);
+            SearchButton.MouseState = MaterialSkin.MouseState.HOVER;
+            SearchButton.Name = "SearchButton";
+            SearchButton.NoAccentTextColor = Color.Empty;
+            SearchButton.Size = new Size(78, 36);
+            SearchButton.TabIndex = 2;
+            SearchButton.Text = "Search";
+            SearchButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            SearchButton.UseAccentColor = false;
+            SearchButton.UseVisualStyleBackColor = true;
+            // 
             // SampleViews
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(materialLabel1);
-            Controls.Add(SearchTextBox);
             Controls.Add(TopViewPanel);
             Name = "SampleViews";
             Load += SampleViews_Load;
             TopViewPanel.ResumeLayout(false);
             TopViewPanel.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         public MaterialSkin.Controls.MaterialButton AddNewButton;
         public MaterialSkin.Controls.MaterialTextBox2 SearchTextBox;
-        public MaterialSkin.Controls.MaterialLabel materialLabel1;
         public Panel TopViewPanel;
+        private MaterialSkin.Controls.MaterialButton SearchButton;
     }
 }

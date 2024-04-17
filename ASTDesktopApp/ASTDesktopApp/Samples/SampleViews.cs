@@ -19,7 +19,7 @@ namespace ASTDesktopApp
             InitializeComponent();
         }
 
-        
+
         public virtual void SampleViews_Load(object sender, EventArgs e)
         {
 
@@ -37,11 +37,16 @@ namespace ASTDesktopApp
             AddUsers add = new AddUsers();
             add.Show();
 
-            
+
 
         }
 
         public virtual void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void SearchButton_Click(object sender, EventArgs e)
         {
 
         }

@@ -34,11 +34,16 @@
             CategoryDataGridView = new DataGridView();
             dgvID = new DataGridViewTextBoxColumn();
             dgvName = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CategoryDataGridView).BeginInit();
             SuspendLayout();
+            // 
+            // SearchTextBox
+            // 
+            SearchTextBox.Location = new Point(389, 36);
             // 
             // TopViewPanel
             // 
@@ -53,7 +58,7 @@
             CategoryDataGridView.BorderStyle = BorderStyle.Fixed3D;
             CategoryDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             CategoryDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CategoryDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvEdit, dgvDel });
+            CategoryDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, Column1, dgvEdit, dgvDel });
             CategoryDataGridView.Dock = DockStyle.Fill;
             CategoryDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             CategoryDataGridView.Location = new Point(3, 169);
@@ -96,6 +101,14 @@
             dgvName.Name = "dgvName";
             dgvName.ReadOnly = true;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Column1";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Visible = false;
+            // 
             // dgvEdit
             // 
             dgvEdit.HeaderText = "";
@@ -118,18 +131,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(CategoryDataGridView);
+            Location = new Point(0, 0);
             Name = "CategoryView";
             Text = "Categories";
             Load += CategoryView_Load;
             Controls.SetChildIndex(TopViewPanel, 0);
-            Controls.SetChildIndex(SearchTextBox, 0);
-            Controls.SetChildIndex(materialLabel1, 0);
             Controls.SetChildIndex(CategoryDataGridView, 0);
             TopViewPanel.ResumeLayout(false);
             TopViewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CategoryDataGridView).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -137,6 +148,7 @@
         private DataGridView CategoryDataGridView;
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvName;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
     }
