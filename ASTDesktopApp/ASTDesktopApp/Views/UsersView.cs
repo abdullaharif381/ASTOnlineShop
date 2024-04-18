@@ -41,8 +41,8 @@ namespace ASTDesktopApp.Views
 			lb.Items.Add(dgvUsername);
 			lb.Items.Add(dgvRole);
 			lb.Items.Add(dgvPassword);
-			
-			string query = "SELECT UserID, Username, Role  FROM Users WHERE Username like '%" + SearchTextBox.Text + "%' ORDER BY UserID";
+
+            string query = "SELECT UserID, Username, Role  FROM Users WHERE Username like '%" + SearchTextBox.Text + "%' OR Role like '%" + SearchTextBox.Text + "%' ORDER BY UserID";
 			MainClass.LoadData(query, UserDataGridView, lb);
 
 
@@ -99,12 +99,12 @@ namespace ASTDesktopApp.Views
 
 		}
 
-		public override void SearchTextBox_TextChanged(object sender, EventArgs e)
-		{
+        public override void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
 
-		}
-
-		private void SearchTextBox_Click_1(object sender, EventArgs e)
+        private void SearchTextBox_Click_1(object sender, EventArgs e)
 		{
 
 		}

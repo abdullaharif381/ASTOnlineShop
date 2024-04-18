@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             CustomerDataGridView = new DataGridView();
+            SrNo = new DataGridViewTextBoxColumn();
             dgvID = new DataGridViewTextBoxColumn();
             dgvName = new DataGridViewTextBoxColumn();
             dgvAddress = new DataGridViewTextBoxColumn();
@@ -45,12 +46,12 @@
             // 
             CustomerDataGridView.AllowUserToAddRows = false;
             CustomerDataGridView.AllowUserToDeleteRows = false;
-            CustomerDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            CustomerDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             CustomerDataGridView.BackgroundColor = SystemColors.InactiveBorder;
             CustomerDataGridView.BorderStyle = BorderStyle.Fixed3D;
             CustomerDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             CustomerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CustomerDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvAddress, dgvPhone, Column1, dgvEdit, dgvDel });
+            CustomerDataGridView.Columns.AddRange(new DataGridViewColumn[] { SrNo, dgvID, dgvName, dgvAddress, dgvPhone, Column1, dgvEdit, dgvDel });
             CustomerDataGridView.Dock = DockStyle.Fill;
             CustomerDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             CustomerDataGridView.Location = new Point(3, 169);
@@ -65,12 +66,21 @@
             CustomerDataGridView.Size = new Size(794, 278);
             CustomerDataGridView.TabIndex = 7;
             // 
+            // SrNo
+            // 
+            SrNo.HeaderText = "SrNo";
+            SrNo.MinimumWidth = 6;
+            SrNo.Name = "SrNo";
+            SrNo.ReadOnly = true;
+            SrNo.Width = 6;
+            // 
             // dgvID
             // 
             dgvID.HeaderText = "ID";
             dgvID.MinimumWidth = 6;
             dgvID.Name = "dgvID";
             dgvID.ReadOnly = true;
+            dgvID.Width = 6;
             // 
             // dgvName
             // 
@@ -78,6 +88,7 @@
             dgvName.MinimumWidth = 6;
             dgvName.Name = "dgvName";
             dgvName.ReadOnly = true;
+            dgvName.Width = 6;
             // 
             // dgvAddress
             // 
@@ -85,6 +96,7 @@
             dgvAddress.MinimumWidth = 6;
             dgvAddress.Name = "dgvAddress";
             dgvAddress.ReadOnly = true;
+            dgvAddress.Width = 6;
             // 
             // dgvPhone
             // 
@@ -92,6 +104,7 @@
             dgvPhone.MinimumWidth = 6;
             dgvPhone.Name = "dgvPhone";
             dgvPhone.ReadOnly = true;
+            dgvPhone.Width = 6;
             // 
             // Column1
             // 
@@ -100,6 +113,7 @@
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
             Column1.Visible = false;
+            Column1.Width = 6;
             // 
             // dgvEdit
             // 
@@ -108,6 +122,7 @@
             dgvEdit.MinimumWidth = 6;
             dgvEdit.Name = "dgvEdit";
             dgvEdit.ReadOnly = true;
+            dgvEdit.Width = 6;
             // 
             // dgvDel
             // 
@@ -116,6 +131,7 @@
             dgvDel.MinimumWidth = 6;
             dgvDel.Name = "dgvDel";
             dgvDel.ReadOnly = true;
+            dgvDel.Width = 6;
             // 
             // CustomersView
             // 
@@ -138,6 +154,7 @@
         #endregion
         private DataGridViewButtonColumn dgvModify;
         private DataGridView CustomerDataGridView;
+        private DataGridViewTextBoxColumn SrNo;
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvName;
         private DataGridViewTextBoxColumn dgvAddress;

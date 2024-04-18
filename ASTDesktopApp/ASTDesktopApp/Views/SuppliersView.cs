@@ -35,7 +35,7 @@ namespace ASTDesktopApp.Views
             lb.Items.Add(dgvAddress);
             lb.Items.Add(dgvPhone);
 
-            string query = "SELECT SupplierID, Name, Address, Phone  FROM Suppliers WHERE Name like '%" + SearchTextBox.Text + "%' ORDER BY SupplierID";
+            string query = "SELECT SupplierID, Name, Address, Phone  FROM Suppliers WHERE Name LIKE '%" + SearchTextBox.Text + "%' OR Address LIKE '%" + SearchTextBox.Text + "%' OR Phone LIKE '%" + SearchTextBox.Text + "%' ORDER BY SupplierID";
             MainClass.LoadData(query, SupplierDataGridView, lb);
 
 
@@ -99,13 +99,12 @@ namespace ASTDesktopApp.Views
             //}
         }
 
+        public override void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
 
 
-
-
-
-
-       
         public override void AddNewButton_Click(object sender, EventArgs e)
         {
             // open the addSuppliers.cs form when this button is clicked:

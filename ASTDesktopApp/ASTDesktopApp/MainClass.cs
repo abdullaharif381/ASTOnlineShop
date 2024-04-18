@@ -9,6 +9,7 @@ using MaterialSkin.Controls;
 using System.Drawing;
 using System.Diagnostics;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ASTDesktopApp
 {
@@ -208,5 +209,56 @@ namespace ASTDesktopApp
             }
             return count == 0;
         }
+        //function for combo fill
+        public static void FillCombo(string query, MaterialComboBox cb, string displayMember, string valueMember)
+        {
+            try
+            {
+                ConnectToDatabase();
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, Connection);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                cb.DataSource = dt;
+                cb.DisplayMember = displayMember;
+                cb.ValueMember = valueMember;
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                CloseConnection();
+            }
+        }    
+            
+
+
+
+        public static string GetCategoryName(int catId)
+        {
+            try
+            {
+                string query = $"SELECT Name FROM Categories WHERE CategoryID = @catId";
+                SQLiteCommand cmd = new SQLiteCommand(query, MainClass.Connection);
+                cmd.Parameters.AddWithValue("@catId", catId);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    return result.ToString();
+                }
+                else
+                {
+                    return "Category Not Found";
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception (e.g., log or display error message)
+                Console.WriteLine("Error occurred while fetching category name: " + ex.Message);
+                return "Error";
+            }
+        }
+
+
     }
 }

@@ -32,9 +32,9 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             CategoryDataGridView = new DataGridView();
+            SrNo = new DataGridViewTextBoxColumn();
             dgvID = new DataGridViewTextBoxColumn();
             dgvName = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
@@ -43,7 +43,7 @@
             // 
             // SearchTextBox
             // 
-            SearchTextBox.Location = new Point(389, 36);
+            SearchTextBox.Location = new Point(371, 24);
             // 
             // TopViewPanel
             // 
@@ -53,12 +53,12 @@
             // 
             CategoryDataGridView.AllowUserToAddRows = false;
             CategoryDataGridView.AllowUserToDeleteRows = false;
-            CategoryDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            CategoryDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             CategoryDataGridView.BackgroundColor = SystemColors.InactiveBorder;
             CategoryDataGridView.BorderStyle = BorderStyle.Fixed3D;
             CategoryDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             CategoryDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CategoryDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, Column1, dgvEdit, dgvDel });
+            CategoryDataGridView.Columns.AddRange(new DataGridViewColumn[] { SrNo, dgvID, dgvName, dgvEdit, dgvDel });
             CategoryDataGridView.Dock = DockStyle.Fill;
             CategoryDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             CategoryDataGridView.Location = new Point(3, 169);
@@ -73,6 +73,14 @@
             CategoryDataGridView.TabIndex = 5;
             CategoryDataGridView.CellContentClick += CategoryDataGridView_CellContentClick;
             // 
+            // SrNo
+            // 
+            SrNo.HeaderText = "SrNo";
+            SrNo.MinimumWidth = 6;
+            SrNo.Name = "SrNo";
+            SrNo.ReadOnly = true;
+            SrNo.Width = 6;
+            // 
             // dgvID
             // 
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -86,6 +94,7 @@
             dgvID.MinimumWidth = 50;
             dgvID.Name = "dgvID";
             dgvID.ReadOnly = true;
+            dgvID.Width = 50;
             // 
             // dgvName
             // 
@@ -101,14 +110,6 @@
             dgvName.Name = "dgvName";
             dgvName.ReadOnly = true;
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Visible = false;
-            // 
             // dgvEdit
             // 
             dgvEdit.HeaderText = "";
@@ -116,6 +117,7 @@
             dgvEdit.MinimumWidth = 6;
             dgvEdit.Name = "dgvEdit";
             dgvEdit.ReadOnly = true;
+            dgvEdit.Width = 6;
             // 
             // dgvDel
             // 
@@ -124,6 +126,7 @@
             dgvDel.MinimumWidth = 6;
             dgvDel.Name = "dgvDel";
             dgvDel.ReadOnly = true;
+            dgvDel.Width = 6;
             // 
             // CategoryView
             // 
@@ -146,9 +149,9 @@
         #endregion
 
         private DataGridView CategoryDataGridView;
+        private DataGridViewTextBoxColumn SrNo;
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvName;
-        private DataGridViewTextBoxColumn Column1;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
     }

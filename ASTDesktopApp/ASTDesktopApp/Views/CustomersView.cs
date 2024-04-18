@@ -35,7 +35,8 @@ namespace ASTDesktopApp.Views
             lb.Items.Add(dgvAddress);
             lb.Items.Add(dgvPhone);
 
-            string query = "SELECT CustomerID, Name, Address, Phone  FROM Customers WHERE Name like '%" + SearchTextBox.Text + "%' ORDER BY CustomerID";
+
+            string query = "SELECT CustomerID, Name, Address, Phone  FROM Customers WHERE Name LIKE '%" + SearchTextBox.Text + "%' OR Address LIKE '%" + SearchTextBox.Text + "%' OR Phone LIKE '%" + SearchTextBox.Text + "%' ORDER BY CustomerID";
             MainClass.LoadData(query, CustomerDataGridView, lb);
 
 
@@ -103,6 +104,16 @@ namespace ASTDesktopApp.Views
         {
 
         }
-        
+        public override void SearchButton_Click(object sender, EventArgs e)
+        {
+            base.SearchButton_Click(sender, e);
+            LoadData();
+
+        }
+        public override void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
     }
 }

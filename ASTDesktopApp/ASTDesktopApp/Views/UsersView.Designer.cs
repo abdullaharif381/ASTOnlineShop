@@ -34,6 +34,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             UserDataGridView = new DataGridView();
+            SrNo = new DataGridViewTextBoxColumn();
             dgvID = new DataGridViewTextBoxColumn();
             dgvUsername = new DataGridViewTextBoxColumn();
             dgvPassword = new DataGridViewTextBoxColumn();
@@ -57,7 +58,7 @@
             UserDataGridView.BorderStyle = BorderStyle.Fixed3D;
             UserDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             UserDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvUsername, dgvPassword, dgvRole, dgvEdit, dgvDel });
+            UserDataGridView.Columns.AddRange(new DataGridViewColumn[] { SrNo, dgvID, dgvUsername, dgvPassword, dgvRole, dgvEdit, dgvDel });
             UserDataGridView.Dock = DockStyle.Fill;
             UserDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             UserDataGridView.Location = new Point(3, 169);
@@ -71,6 +72,13 @@
             UserDataGridView.Size = new Size(794, 278);
             UserDataGridView.TabIndex = 4;
             UserDataGridView.CellContentClick += UserDataGridView_CellContentClick;
+            // 
+            // SrNo
+            // 
+            SrNo.HeaderText = "SrNo";
+            SrNo.MinimumWidth = 6;
+            SrNo.Name = "SrNo";
+            SrNo.ReadOnly = true;
             // 
             // dgvID
             // 
@@ -154,14 +162,12 @@
             Location = new Point(0, 0);
             Name = "UsersView";
             Text = "Users";
-            
-            //Controls.SetChildIndex(materialLabel1, 0);
+            Controls.SetChildIndex(TopViewPanel, 0);
             Controls.SetChildIndex(UserDataGridView, 0);
             TopViewPanel.ResumeLayout(false);
             TopViewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)UserDataGridView).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -173,5 +179,6 @@
         private DataGridViewTextBoxColumn dgvRole;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
+        private DataGridViewTextBoxColumn SrNo;
     }
 }

@@ -81,7 +81,7 @@ namespace ASTDesktopApp.Views
 
         public override void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            // Implement search functionality here
+            LoadData();
         }
 
         private void SearchTextBox_Click_1(object sender, EventArgs e)

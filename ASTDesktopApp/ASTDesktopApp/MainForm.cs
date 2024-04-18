@@ -105,6 +105,8 @@ namespace ASTDesktopApp
 
         private void ProductsButton_Click(object sender, EventArgs e)
         {
+            //connect with productsview open other file to add products
+            AddControlsToPanel(new ProductsView());
 
         }
 

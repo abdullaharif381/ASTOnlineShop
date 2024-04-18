@@ -30,11 +30,11 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             SupplierDataGridView = new DataGridView();
+            SrNo = new DataGridViewTextBoxColumn();
             dgvID = new DataGridViewTextBoxColumn();
             dgvName = new DataGridViewTextBoxColumn();
             dgvAddress = new DataGridViewTextBoxColumn();
             dgvPhone = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             dgvEdit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
             TopViewPanel.SuspendLayout();
@@ -50,7 +50,7 @@
             SupplierDataGridView.BorderStyle = BorderStyle.Fixed3D;
             SupplierDataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             SupplierDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SupplierDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvAddress, dgvPhone, Column1, dgvEdit, dgvDel });
+            SupplierDataGridView.Columns.AddRange(new DataGridViewColumn[] { SrNo, dgvID, dgvName, dgvAddress, dgvPhone, dgvEdit, dgvDel });
             SupplierDataGridView.Dock = DockStyle.Fill;
             SupplierDataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             SupplierDataGridView.Location = new Point(3, 169);
@@ -64,6 +64,12 @@
             SupplierDataGridView.Size = new Size(794, 278);
             SupplierDataGridView.TabIndex = 6;
             SupplierDataGridView.CellContentClick += SupplierDataGridView_CellContentClick_2;
+            // 
+            // SrNo
+            // 
+            SrNo.HeaderText = "SrNo";
+            SrNo.MinimumWidth = 6;
+            SrNo.Name = "SrNo";
             // 
             // dgvID
             // 
@@ -89,13 +95,6 @@
             dgvPhone.HeaderText = "Phone";
             dgvPhone.MinimumWidth = 6;
             dgvPhone.Name = "dgvPhone";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Visible = false;
             // 
             // dgvEdit
             // 
@@ -134,11 +133,11 @@
         #endregion
 
         private DataGridView SupplierDataGridView;
+        private DataGridViewTextBoxColumn SrNo;
         private DataGridViewTextBoxColumn dgvID;
         private DataGridViewTextBoxColumn dgvName;
         private DataGridViewTextBoxColumn dgvAddress;
         private DataGridViewTextBoxColumn dgvPhone;
-        private DataGridViewTextBoxColumn Column1;
         private DataGridViewImageColumn dgvEdit;
         private DataGridViewImageColumn dgvDel;
     }

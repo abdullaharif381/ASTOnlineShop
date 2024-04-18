@@ -343,7 +343,7 @@
         private MaterialSkin.Controls.MaterialButton UsersButton;
         private Panel LeftPanel;
         private Panel MiddlePanel;
-        private Label HiLabel;
+        //private Label HiLabel;
         private Label HiLabel1;
         private MaterialSkin.Controls.MaterialButton SuppliersButton;
     }
