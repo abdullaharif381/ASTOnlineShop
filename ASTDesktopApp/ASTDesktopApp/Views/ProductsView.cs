@@ -30,7 +30,7 @@ namespace ASTDesktopApp.Views
             ListBox lb = new ListBox();
             lb.Items.Add(dgvID);
             lb.Items.Add(dgvItem);
-            lb.Items.Add(dgvCategoryID);       
+            lb.Items.Add(dgvCategoryID);
             lb.Items.Add(dgvCategoryName);
             lb.Items.Add(dgvDetail);
             lb.Items.Add(dgvCost);
@@ -119,6 +119,11 @@ namespace ASTDesktopApp.Views
         {
             // Suppress the error dialog
             e.ThrowException = false;
+        }
+
+        private void ProductDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
