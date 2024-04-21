@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ASTDesktopApp.Views
 {
+    // this is purchase view
     public partial class PurchaseView : SampleViews
     {
         public PurchaseView()
