@@ -27,10 +27,9 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
+# [Oo]bj/
+# [Ll]og/
+# [Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -57,7 +56,7 @@ dlldata.c
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 
-# .NET Core
+#.NET Core
 project.lock.json
 project.fragment.lock.json
 artifacts/
@@ -127,7 +126,7 @@ $tf/
 # Guidance Automation Toolkit
 *.gpState
 
-# ReSharper is a .NET coding add-in
+# ReSharper is a.NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
@@ -197,9 +196,9 @@ PublishScripts/
 # NuGet Symbol Packages
 *.snupkg
 # The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
+# **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
-!**/[Pp]ackages/build/
+**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
@@ -224,9 +223,9 @@ _pkginfo.txt
 *.appxupload
 
 # Visual Studio cache files
-# files ending in .cache can be ignored
+# files ending in.cache can be ignored
 *.[Cc]ache
-# but keep track of directories ending in .cache
+# but keep track of directories ending in.cache
 !?*.[Cc]ache/
 
 # Others
@@ -329,7 +328,7 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/**
-# !tools/packages.config
+#!tools/packages.config
 
 # Tabs Studio
 *.tss

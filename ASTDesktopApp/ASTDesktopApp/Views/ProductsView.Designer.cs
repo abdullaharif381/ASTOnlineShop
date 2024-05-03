@@ -55,7 +55,6 @@
 			ProductDataGridView.RowHeadersWidth = 51;
 			ProductDataGridView.Size = new Size(794, 278);
 			ProductDataGridView.TabIndex = 4;
-			ProductDataGridView.CellContentClick += ProductDataGridView_CellContentClick_1;
 			// 
 			// dgvSr
 			// 
