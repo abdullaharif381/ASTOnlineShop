@@ -33,9 +33,9 @@ namespace ASTDesktopApp
         public virtual void AddNewButton_Click(object sender, EventArgs e)
         {
             // open the AddUsers.cs form when this button is clicked:
-            MainClass.BlurBackground(new AddUsers());
-            AddUsers add = new AddUsers();
-            add.Show();
+            //MainClass.BlurBackground(new AddUsers());
+            //AddUsers add = new AddUsers();
+            //add.Show();
 
 
 

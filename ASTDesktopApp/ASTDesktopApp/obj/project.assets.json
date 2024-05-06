@@ -2,6 +2,41 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "asprise-ocr-api/15.3.1": {
+        "type": "package",
+        "dependencies": {
+          "asprise-ocr-dll-bundle-32": "15.3.1",
+          "asprise-ocr-dll-bundle-64": "15.3.1"
+        },
+        "compile": {
+          "lib/net40/asprise-ocr-api.dll": {
+            "related": ".pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/net40/asprise-ocr-api.dll": {
+            "related": ".pdb;.XML"
+          }
+        }
+      },
+      "asprise-ocr-dll-bundle-32/15.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/asprise-ocr-dll-bundle-32.dll": {}
+        },
+        "runtime": {
+          "lib/net40/asprise-ocr-dll-bundle-32.dll": {}
+        }
+      },
+      "asprise-ocr-dll-bundle-64/15.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/asprise-ocr-dll-bundle-64.dll": {}
+        },
+        "runtime": {
+          "lib/net40/asprise-ocr-dll-bundle-64.dll": {}
+        }
+      },
       "MaterialSkin.2/2.3.1": {
         "type": "package",
         "compile": {
@@ -66,6 +101,49 @@
     }
   },
   "libraries": {
+    "asprise-ocr-api/15.3.1": {
+      "sha512": "YBaHQyu/I0Lg4A2v0+LYjktHAlcmEmEtXTS4PZ2NksWT57ka+A3GGL/gZVYVGlXC9Zs+lepbowjoaxxkUDAd1g==",
+      "type": "package",
+      "path": "asprise-ocr-api/15.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asprise-ocr-api.15.3.1.nupkg.sha512",
+        "asprise-ocr-api.nuspec",
+        "content/OcrSampleForm.Designer.cs",
+        "content/OcrSampleForm.cs",
+        "content/OcrSampleForm.resx",
+        "content/ReadMe-AspriseOCR.txt",
+        "lib/net40/asprise-ocr-api.XML",
+        "lib/net40/asprise-ocr-api.dll",
+        "lib/net40/asprise-ocr-api.pdb",
+        "readme.txt"
+      ]
+    },
+    "asprise-ocr-dll-bundle-32/15.3.1": {
+      "sha512": "Vd6doZrB4NxSQfnIyMG71nfE2Jc5odFo+Ddj5pljH5TxZ2KoN1J2fMIdVK5kCwSbkr2k16ELKP4v35dP4KEXFA==",
+      "type": "package",
+      "path": "asprise-ocr-dll-bundle-32/15.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asprise-ocr-dll-bundle-32.15.3.1.nupkg.sha512",
+        "asprise-ocr-dll-bundle-32.nuspec",
+        "lib/net40/asprise-ocr-dll-bundle-32.dll"
+      ]
+    },
+    "asprise-ocr-dll-bundle-64/15.3.1": {
+      "sha512": "t89ZtRYz5kjPMhNPaPKfQvdHV5+AiznWMWd1fbV3OAAVWR8AsWImq+YdZWEmaLJfnT7nCYoEfgtavXsbvd4wZg==",
+      "type": "package",
+      "path": "asprise-ocr-dll-bundle-64/15.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asprise-ocr-dll-bundle-64.15.3.1.nupkg.sha512",
+        "asprise-ocr-dll-bundle-64.nuspec",
+        "lib/net40/asprise-ocr-dll-bundle-64.dll"
+      ]
+    },
     "MaterialSkin.2/2.3.1": {
       "sha512": "w2vFxLNk4InCDU7pXDfBqPfv55HhBtuu8HRfEqQpeS3sNTS1pUzDs/hS0b5JW2/tKvt+P1of9OINP8a9omWDBg==",
       "type": "package",
@@ -137,7 +215,8 @@
     "net8.0-windows7.0": [
       "MaterialSkin.2 >= 2.3.1",
       "MaterialSkin.2.RTL >= 2.3.1.1",
-      "System.Data.SQLite.Core >= 1.0.118"
+      "System.Data.SQLite.Core >= 1.0.118",
+      "asprise-ocr-api >= 15.3.1"
     ]
   },
   "packageFolders": {
@@ -195,6 +274,10 @@
           "System.Data.SQLite.Core": {
             "target": "Package",
             "version": "[1.0.118, )"
+          },
+          "asprise-ocr-api": {
+            "target": "Package",
+            "version": "[15.3.1, )"
           }
         },
         "imports": [
@@ -219,5 +302,37 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'asprise-ocr-api 15.3.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "asprise-ocr-api",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'asprise-ocr-dll-bundle-32 15.3.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "asprise-ocr-dll-bundle-32",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'asprise-ocr-dll-bundle-64 15.3.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "asprise-ocr-dll-bundle-64",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

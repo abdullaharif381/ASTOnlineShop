@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="asprise-ocr-api" Version="15.3.1" />
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
     <PackageReference Include="MaterialSkin.2.RTL" Version="2.3.1.1" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
