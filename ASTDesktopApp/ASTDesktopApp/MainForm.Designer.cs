@@ -40,9 +40,9 @@
 			ProductsButton = new MaterialSkin.Controls.MaterialButton();
 			UsersButton = new MaterialSkin.Controls.MaterialButton();
 			LeftPanel = new Panel();
+			materialButton1 = new MaterialSkin.Controls.MaterialButton();
 			SuppliersButton = new MaterialSkin.Controls.MaterialButton();
 			HiLabel1 = new Label();
-			materialButton1 = new MaterialSkin.Controls.MaterialButton();
 			CentrePanel.SuspendLayout();
 			LeftPanel.SuspendLayout();
 			SuspendLayout();
@@ -52,9 +52,9 @@
 			CentrePanel.AutoSize = true;
 			CentrePanel.Controls.Add(MiddlePanel);
 			CentrePanel.Dock = DockStyle.Fill;
-			CentrePanel.Location = new Point(309, 64);
+			CentrePanel.Location = new Point(470, 64);
 			CentrePanel.Name = "CentrePanel";
-			CentrePanel.Size = new Size(888, 750);
+			CentrePanel.Size = new Size(727, 750);
 			CentrePanel.TabIndex = 1;
 			// 
 			// MiddlePanel
@@ -65,7 +65,7 @@
 			MiddlePanel.Dock = DockStyle.Fill;
 			MiddlePanel.Location = new Point(0, 0);
 			MiddlePanel.Name = "MiddlePanel";
-			MiddlePanel.Size = new Size(888, 750);
+			MiddlePanel.Size = new Size(727, 750);
 			MiddlePanel.TabIndex = 0;
 			MiddlePanel.Paint += MiddlePanel_Paint;
 			// 
@@ -79,7 +79,7 @@
 			ReportButton.ForeColor = Color.White;
 			ReportButton.HighEmphasis = false;
 			ReportButton.Icon = Properties.Resources.report;
-			ReportButton.Location = new Point(37, 579);
+			ReportButton.Location = new Point(25, 678);
 			ReportButton.Margin = new Padding(0);
 			ReportButton.MouseState = MaterialSkin.MouseState.HOVER;
 			ReportButton.Name = "ReportButton";
@@ -102,7 +102,7 @@
 			CustomersButton.ForeColor = Color.White;
 			CustomersButton.HighEmphasis = false;
 			CustomersButton.Icon = Properties.Resources.customer1;
-			CustomersButton.Location = new Point(37, 391);
+			CustomersButton.Location = new Point(38, 322);
 			CustomersButton.Margin = new Padding(0);
 			CustomersButton.MouseState = MaterialSkin.MouseState.HOVER;
 			CustomersButton.Name = "CustomersButton";
@@ -149,7 +149,7 @@
 			SaleButton.ForeColor = Color.White;
 			SaleButton.HighEmphasis = false;
 			SaleButton.Icon = Properties.Resources.sales;
-			SaleButton.Location = new Point(37, 513);
+			SaleButton.Location = new Point(37, 553);
 			SaleButton.Margin = new Padding(0);
 			SaleButton.MouseState = MaterialSkin.MouseState.HOVER;
 			SaleButton.Name = "SaleButton";
@@ -195,7 +195,7 @@
 			PurchaseButton.ForeColor = Color.White;
 			PurchaseButton.HighEmphasis = false;
 			PurchaseButton.Icon = Properties.Resources.purchase;
-			PurchaseButton.Location = new Point(37, 322);
+			PurchaseButton.Location = new Point(25, 615);
 			PurchaseButton.Margin = new Padding(0);
 			PurchaseButton.MouseState = MaterialSkin.MouseState.HOVER;
 			PurchaseButton.Name = "PurchaseButton";
@@ -241,7 +241,7 @@
 			UsersButton.ForeColor = Color.White;
 			UsersButton.HighEmphasis = false;
 			UsersButton.Icon = (Image)resources.GetObject("UsersButton.Icon");
-			UsersButton.Location = new Point(37, 639);
+			UsersButton.Location = new Point(38, 447);
 			UsersButton.Margin = new Padding(0);
 			UsersButton.MouseState = MaterialSkin.MouseState.HOVER;
 			UsersButton.Name = "UsersButton";
@@ -272,9 +272,32 @@
 			LeftPanel.Dock = DockStyle.Left;
 			LeftPanel.Location = new Point(3, 64);
 			LeftPanel.Name = "LeftPanel";
-			LeftPanel.Size = new Size(306, 750);
+			LeftPanel.Size = new Size(467, 750);
 			LeftPanel.TabIndex = 0;
 			LeftPanel.Paint += LeftPanel_Paint;
+			// 
+			// materialButton1
+			// 
+			materialButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+			materialButton1.BackColor = Color.DarkGray;
+			materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+			materialButton1.Depth = 0;
+			materialButton1.ForeColor = Color.White;
+			materialButton1.HighEmphasis = false;
+			materialButton1.Icon = Properties.Resources.chemical;
+			materialButton1.Location = new Point(37, 499);
+			materialButton1.Margin = new Padding(0);
+			materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+			materialButton1.Name = "materialButton1";
+			materialButton1.NoAccentTextColor = Color.Empty;
+			materialButton1.Size = new Size(78, 36);
+			materialButton1.TabIndex = 17;
+			materialButton1.Text = "OCR";
+			materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+			materialButton1.UseAccentColor = false;
+			materialButton1.UseVisualStyleBackColor = false;
+			materialButton1.Click += materialButton1_Click;
 			// 
 			// SuppliersButton
 			// 
@@ -287,7 +310,7 @@
 			SuppliersButton.ForeColor = Color.White;
 			SuppliersButton.HighEmphasis = false;
 			SuppliersButton.Icon = Properties.Resources.supplier;
-			SuppliersButton.Location = new Point(38, 453);
+			SuppliersButton.Location = new Point(38, 389);
 			SuppliersButton.Margin = new Padding(0);
 			SuppliersButton.MouseState = MaterialSkin.MouseState.HOVER;
 			SuppliersButton.Name = "SuppliersButton";
@@ -311,29 +334,6 @@
 			HiLabel1.TabIndex = 15;
 			HiLabel1.Text = "label1";
 			HiLabel1.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// materialButton1
-			// 
-			materialButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-			materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-			materialButton1.BackColor = Color.DarkGray;
-			materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-			materialButton1.Depth = 0;
-			materialButton1.ForeColor = Color.White;
-			materialButton1.HighEmphasis = false;
-			materialButton1.Icon = (Image)resources.GetObject("materialButton1.Icon");
-			materialButton1.Location = new Point(38, 697);
-			materialButton1.Margin = new Padding(0);
-			materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-			materialButton1.Name = "materialButton1";
-			materialButton1.NoAccentTextColor = Color.Empty;
-			materialButton1.Size = new Size(94, 36);
-			materialButton1.TabIndex = 17;
-			materialButton1.Text = "OCR";
-			materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-			materialButton1.UseAccentColor = false;
-			materialButton1.UseVisualStyleBackColor = false;
-			materialButton1.Click += materialButton1_Click;
 			// 
 			// MainForm
 			// 

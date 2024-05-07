@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            try
-            {
+            
+            
                 // The code that may throw the KeyNotFoundException
                 // For example:
                 // MaterialSkinManager.getFontByType(fontType type, RightToLeft RightToLeft);
@@ -319,13 +319,7 @@
                 ((System.ComponentModel.ISupportInitialize)ProductPictureBox).EndInit();
                 ResumeLayout(false);
                 PerformLayout();
-            }
-			catch (KeyNotFoundException ex)
-			{
-				// Handle the exception
-				Console.WriteLine("An error occurred: " + ex.Message);
-				// Optionally, you can perform additional error handling or logging here
-			}
+           
 		}
 
         #endregion
