@@ -3,4 +3,5 @@ The two projects are a part of the courses Database Systems Lab and Fundamentals
 
 ### Demo Video
 
-![](demo_video.mp4)
+<video src="demo_video.mp4" width="320" height="240" controls></video>
+
