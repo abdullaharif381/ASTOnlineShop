@@ -3,5 +3,9 @@ The two projects are a part of the courses Database Systems Lab and Fundamentals
 
 ### Demo Video
 
-<video src="https://github.com/abdullaharif381/ASTOnlineShop/blob/main/demo_video.mp4" width="320" height="240" controls></video>
+
+
+
+
+https://github.com/abdullaharif381/ASTOnlineShop/assets/80403594/be648b78-5831-422d-a1e7-fa84cd372f64
 
