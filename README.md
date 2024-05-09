@@ -1,2 +1,6 @@
-# ASTOnlineShop
-Alkhair Scientific Traders web application for online ecommerce shop.
+# ASTOnlineShop and ASTDesktopApplication
+The two projects are a part of the courses Database Systems Lab and Fundamentals of Software Engineering respectively. Their outcome is a fantastic product of web and desktop application named "Chem Ease"
+
+### Demo Video
+
+![](demo_video.mp4)
